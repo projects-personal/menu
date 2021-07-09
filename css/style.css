@@ -1,47 +1,65 @@
 @font-face {
     font-family: open-ligth;
     src: url(../font-family/OpenSans-Light.ttf);
-   
-    
 }
+
 @font-face {
     font-family: semi-bold;
-    src: url(../font-family/OpenSans-SemiBold.ttf); 
+    src: url(../font-family/OpenSans-SemiBold.ttf);
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: open-ligth;
-   
 }
 
-body{
-   
-}
-header{
+body {}
+
+header {
     background: url(../images/background.jpg) no-repeat fixed;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+    position: relative;
 }
-header .container-menu{
-    display: flex; 
+
+.legend-message {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #fff;
+    font-family: 'semi-bold';
+    font-size: 2rem;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    word-wrap: break-word;
+}
+
+header .container-menu {
+    display: flex;
     justify-content: space-between;
-    max-width: 1200px; 
     margin: auto;
     align-items: center;
-    padding: 10px auto;
+    padding: 0 30px;
 }
-header .container-menu .logo-menu{
+
+header .container-menu .logo-menu {
     color: #ffff;
     cursor: pointer;
 }
-header .container-menu .logo-menu label{
+
+header .container-menu .logo-menu label {
     cursor: pointer;
+    font-size: 29px;
+    padding: 10px 0;
 }
-header .container-menu .logo-menu{}
+
+header .container-menu .logo-menu {}
+
 nav.menu {}
-nav.menu a{
+
+nav.menu a {
     font-family: semi-bold;
     color: #ffff;
     text-decoration: none;
@@ -49,3 +67,30 @@ nav.menu a{
     display: inline-block;
 }
 
+.section-secundary-menu {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+}
+.section-secundary-menu input{display: none;}
+
+.menu-secundary {
+    padding: 50px 0 0 10px;
+    width: 100%;
+    background: #1c1c1c;
+    height: 100vh;
+    max-width: 350px;
+    position: relative;
+}
+
+.menu-secundary a {
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+    display: block;
+    font-size: 1.3rem;
+
+}
