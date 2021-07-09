@@ -24,14 +24,28 @@ header{
     width: 100vw;
     height: 100vh;
 }
-header .container-menu{display: flexbox;}
-header .container-menu .logo-menu{}
+header .container-menu{
+    display: flex; 
+    justify-content: space-between;
+    max-width: 1200px; 
+    margin: auto;
+    align-items: center;
+    padding: 10px auto;
+}
+header .container-menu .logo-menu{
+    color: #ffff;
+    cursor: pointer;
+}
+header .container-menu .logo-menu label{
+    cursor: pointer;
+}
 header .container-menu .logo-menu{}
 nav.menu {}
 nav.menu a{
     font-family: semi-bold;
     color: #ffff;
     text-decoration: none;
-    
+    padding: 10px;
+    display: inline-block;
 }
 
