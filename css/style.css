@@ -34,6 +34,7 @@ header {
     transform: translate(-50%, -50%);
     text-align: center;
     word-wrap: break-word;
+    z-index: 1;
 }
 
 header .container-menu {
@@ -67,6 +68,10 @@ nav.menu a {
     display: inline-block;
 }
 
+#secundary{
+    display: none;
+}
+
 .section-secundary-menu {
     left: 0;
     top: 0;
@@ -74,9 +79,11 @@ nav.menu a {
     height: 100vh;
     position: absolute;
     background-color: rgba(0,0,0,0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease 500ms;
+    z-index: 2;
 }
-.section-secundary-menu input{display: none;}
-
 .menu-secundary {
     padding: 50px 0 0 10px;
     width: 100%;
@@ -84,6 +91,28 @@ nav.menu a {
     height: 100vh;
     max-width: 350px;
     position: relative;
+    transform: translateX(-100%);
+    transition: all ease 500ms;
+   
+}
+
+
+#secundary:checked ~ .section-secundary-menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+#secundary:checked ~ .section-secundary-menu .menu-secundary{
+    transform: translateX(0%);
+
+}
+
+.menu-secundary label{
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
 }
 
 .menu-secundary a {
@@ -92,5 +121,18 @@ nav.menu a {
     padding: 20px;
     display: block;
     font-size: 1.3rem;
+    transition: all ease 0.3s;
+    border-left: 2px solid transparent;
+    text-transform: capitalize;
+}
 
+
+.menu-secundary a:hover{
+    border-left: 2px solid rgb(241, 241, 241);
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
